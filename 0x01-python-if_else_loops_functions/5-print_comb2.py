@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-# Print numbers from 0 to 99 in ascending order with two digits
-for number in range(100):
-    if number < 99:
-        print("{:02d}, ".format(number), end="")
+for number in range(0, 100):
+    if number == 99:
+        print("{}".format(number))
     else:
-        print("{:02d}".format(number))
-
+        print("{:02}".format(number), end=", ")
