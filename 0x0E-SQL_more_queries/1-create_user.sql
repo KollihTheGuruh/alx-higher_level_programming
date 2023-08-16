@@ -1,3 +1,14 @@
--- creates the MySQL server user user_0d_1 and grant all priviledges
-CREATE USER IF NOT EXISTS user_0d_1@localhost IDENTIFIED BY 'user_0d_1_pwd';
-GRANT ALL PRIVILEGES ON * . * TO user_0d_1@localhost;
+-- creates the database -> hbtn_0d_usa and the table cities (in the database hbtn_0d_usa) on your MySQL server
+
+-- creates a database - MySQL server
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+
+-- use a database - MySQL server
+USE hbtn_0d_usa;
+
+-- creates a table - MySQL server
+CREATE TABLE IF NOT EXISTS cities (id INT UNIQUE AUTO_INCREMENT NOT NULL,
+state_id INT NOT NULL,
+name VARCHAR(256) NOT NULL,
+PRIMARY KEY(id),
+FOREIGN KEY(state_id) REFERENCES states(id));
