@@ -32,4 +32,3 @@ if __name__ == "__main__":
     print(find_peak([-2, -4, 2, 1]))
     print(find_peak([4, 2, 1, 2, 2, 2, 3, 1]))
     print(find_peak([5, 4, 3, 2, 1]))  # Testing with descending order
-    
